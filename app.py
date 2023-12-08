@@ -60,7 +60,7 @@ with gr.Blocks() as demo:
         # size = int(size)
         reader = imageio.get_reader(video)
         fps = reader.get_meta_data()['fps']
-        # assert fps == 25.0, f'Expected video fps: 25, but {fps} fps found'
+        assert fps == 25.0, f'Expected video fps: 25, but {fps} fps found'
         return video
     
     def read_image(image, size=512):
